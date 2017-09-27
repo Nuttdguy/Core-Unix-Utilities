@@ -37,8 +37,10 @@ Challenges within each section are meant to be solved in order.
     - `FIRST_NAME=Phouthalang`
     - `echo $FIRST_NAME`
 1.  Set a variable `FULL_NAME` equal to your full name, then print its value
-    - ``
+    - `FULL_NAME='Phouthalang Pygnasak'`
+    - `echo $FULL_NAME`
 1.  Print all environment variables (names and values)
+    - `printenv`
 1.  Make an alias named `hello` that prints `Hello world`
 1.  Make an alias named `gocode` that navigates to your code directory
 1.  Print all aliases (names and values)
