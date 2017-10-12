@@ -37,16 +37,24 @@ Challenges within each section are meant to be solved in order.
     - `ls ./Animals/*.txt`
 1.  List the files in a subdirectory, like `project`
     - `ls ./Animals`
+    - `ls Animals`
+    - `ls */*`
+    - `ls **/*`
 1.  Navigate to a subdirectory, like `project`
     - `cd Animals`
 1.  Navigate to the parent directory of your working directory
     - `cd ..`
+    - `cd ./..`
 1.  Navigate to a nested subdirectory, like `path/to/project`
     - `cd ./Animals`
+    - `cd Animals/; cd types/`
+    - `cd Animals/ && cd types/`
 1.  Navigate to your home directory
-    - `cd ~`, `cd `
+    - `cd ~` 
+    - `cd `
 1.  Navigate back to the previous directory
     - `cd ..`
+    - `cd -`
 
 ### Variables
 
@@ -62,47 +70,78 @@ Challenges within each section are meant to be solved in order.
     - `echo $FULL_NAME`
 1.  Print all environment variables (names and values)
     - `printenv`
+    - `env`
 1.  Make an alias named `hello` that prints `Hello world`
-    - ``
+    - `$GREETING='Hello World'`, `alias hello='echo $GREETING'`
 1.  Make an alias named `gocode` that navigates to your code directory
+    - `$GOCODE=/make-school`
 1.  Print all aliases (names and values)
+    - ``
 
 ### Getting Help
 
 1.  Print what options a command accepts, like `bash` or `python`
+    - 
 1.  Read the manual for a command, like `echo` or `ls`
+    -
 1.  Print the file path to a command, like `bash` or `python`
+    -
 
 ### Files
 
 1.  Navigate to the directory `Animals`
+    - `cd Animals`
 1.  Print the contents of the file `Cats.txt`
+    - `cat Animals/Cats.txt`
 1.  Print the contents of both files `Cats.txt` and `Dogs.txt`
+    - `cat Animals/Cats.txt Animals/Dogs.txt`
 1.  Count the words in the file `Cats.txt`
+    - `wc Animals/Cats.txt`
 1.  Count the words in all files with the extension `.txt`
+    - `wc */*.txt`
 1.  Copy the file `Dogs.txt` to a new file `BabyDogs.txt`
+    - `cp Animals/Dogs.txt Animals/BabyDogs.txt`
 1.  Rename the file `BabyDogs.txt` to `Puppies.txt`
+    - `mv Animals/BabyDogs.txt Animals/Puppies.txt`
 1.  Make a new directory named `Shelter` inside `Animals`
+    - `mkdir Animals/Shelter`
 1.  Move the file `Puppies.txt` into the directory `Shelter`
+    - `mv Animals/Puppies.txt Animals/Shelter/`
 1.  Copy the file `Cats.txt` to `Kittens.txt` inside `Shelter`
+    - `cp Animals/Cats.txt Animals/Kitten.txt; mv Animals/Kitten.txt Animals/Shelter/`
 1.  List the files within the directory `Shelter`
+    - `ls */Shelter`
 1.  Count the words in all `.txt` files inside `Shelter`
+    - `wc */Shelter/*.txt`
 1.  Try to remove the directory `Shelter` (this should fail)
+    - `mv Animals/Shelter/ ./`
 1.  Remove all `.txt` files inside `Shelter`
+    - `rm Shelter/*.txt`
 1.  Remove the directory `Shelter` (this should succeed)
+    - `rm -rf Shelter/`
 1.  Now cry because you just deleted those poor tiny animals
+    - ``
 
 ### Permissions
 
 1.  Print out your user name
+    - `who am i`
 1.  List the permissions (and metadata) of all `.txt` files
+    - `ls -lR */*.txt`
 1.  Give all users write permission on the file `Cats.txt`
+    - `chmod 745 Animals/Cats.txt`
 1.  List the permissions (and metadata) of the file `Cats.txt`
+    - `ls -al Animals/Cats.txt`
 1.  Change the owner of the file `Cats.txt` to another user
+    - `chown phou Animals/Cats.txt`
 1.  Now list the permissions (and owner) of the file `Cats.txt`
+    - `ls -al Animals/Cats.txt`
 1.  Try to change the owner of the file `Cats.txt` back to yourself
+    - ``
 1.  Invoke the super-user to make the previous command succeed
+    - `sudo chown phou Animals/Cats.txt`
 1.  List the permissions (and owner) of the file `Cats.txt` again
+    - `ls -al Animals/Cats.txt`
 
 
 ## Challenges, Part 2
