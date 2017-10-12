@@ -81,9 +81,9 @@ Challenges within each section are meant to be solved in order.
 ### Getting Help
 
 1.  Print what options a command accepts, like `bash` or `python`
-    - 
+    - `help`
 1.  Read the manual for a command, like `echo` or `ls`
-    -
+    - `man echo`
 1.  Print the file path to a command, like `bash` or `python`
     -
 
@@ -152,32 +152,57 @@ Challenges within each section are meant to be solved in order.
 ### Streams
 
 1.  Print a sentence like `Hello world` into a file named `test.txt`
+    - `echo 'Hello World' >> Streams/test.txt`
 1.  Append another sentence `Hola Mundo` on a new line of `test.txt`
+    - `echo 'Hola Mundo' >> Streams/test.txt`
 1.  Print the contents of the file `test.txt`
+    - `cat Streams/test.txt` 
 1.  Print the contents of the file `numbers.txt`
+    - `cat Numbers/numbers.txt`
 1.  Print the first 10 lines in the file `numbers.txt`
+    - `head -n10  Numbers/numbers.txt`
 1.  Print the first 5 lines in the file `numbers.txt`
+    - `head -n5  Numbers/numbers.txt`
 1.  Print the last 10 lines in the file `numbers.txt`
+    - `tail -n10  Numbers/numbers.txt`
 1.  Print the last 5 lines in the file `numbers.txt`
+    - `tail -n5  Numbers/numbers.txt`
 1.  Print lines 6 through 10 in the file `numbers.txt`
+    - `sed -n '6,10p' Numbers/numbers.txt`
 1.  Sort all lines in the file `numbers.txt`
+    - `sort Numbers/numbers.txt`
 1.  Print the first 2 characters of each line in `numbers.txt`
+    - `cut -c 1-2 Numbers/numbers.txt`
 1.  Print only characters 9-16 of each line in `numbers.txt`
+    - `cut -c 9-16 Numbers/numbers.txt`
 1.  Sort the first 2 characters of each line in `numbers.txt`
+    - `cut -c 1-2 Numbers/numbers.txt | sort`
 1.  Print only the unique first 2 characters of each line in `numbers.txt`
 1.  Replace all `o`s with `0`s in file `test.txt`
 1.  Capitalize all letters in the file `test.txt`
+    - ` cat Numbers/numbers.txt | awk '{print toupper($0)}' `
 1.  Capitalize all letters in the string `Hello world`
+    - `echo 'Hello World' | awk '{print toupper($0)}'`
 
 ### Search
 
 1.  Find the file named `Cats.txt` in the directory `Animals`
+    - ` find ./Animals/ -name 'Cats.txt' `
 1.  Find all files ending with `.py` in your code directory
+    - ` find /Volumes/ -name '*.py' `
 1.  Find all files larger than 100 MB in your movies directory
+    - ` find /Volumes/ -size +100M `
 1.  Find all lines containing the word `one` in the file `numbers.txt`
+    - ` ` 
 1.  Find all lines containing the letter `e` at least 3 times in the file `numbers.txt`
+    - ` `
 1.  Find the `search` function definition in a source code file
+    - ` `
 1.  Find the `search` function definition in all source code files
+    - ` `
 1.  Count the lines and words in all source code files
+    - ` `
 1.  Find all U.S. zip codes in a file containing addresses
+    - ` `
 1.  Find all U.S. zip codes in a file containing addresses
+    - ` `
